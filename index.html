@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kuricak Support</title>
+<meta name="description" content="Support and privacy policy for Kuricak for Windows, a plain-text editor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Layout: one narrow reading column; a teal masthead band like the app icon, then Support and Privacy as two sections. */
+:root {
+  --bg: #f6f7f5;
+  --surface: #ffffff;
+  --fg: #1d2c3d;
+  --muted: #5b6876;
+  --line: #dde3e1;
+  --teal: #0f5f5c;
+  --teal-ink: #ffffff;
+  --gold: #a87c22;
+  --link: #0f5f5c;
+  --display: "Manrope", "Segoe UI", system-ui, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", Consolas, ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121a1f; --surface: #182329; --fg: #e6ece9; --muted: #9eaeb0; --line: #2a3a40;
+    --teal: #0d4f4c; --teal-ink: #f2f6f4; --gold: #d6a849; --link: #8fd0c8; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121a1f; --surface: #182329; --fg: #e6ece9; --muted: #9eaeb0; --line: #2a3a40;
+  --teal: #0d4f4c; --teal-ink: #f2f6f4; --gold: #d6a849; --link: #8fd0c8; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 400 16px/1.65 var(--body); }
+.wrap { max-width: 46rem; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.band { background: var(--teal); color: var(--teal-ink); }
+.band .wrap { padding-block: 2.5rem 2.25rem; display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
+.band img { width: 76px; height: 76px; flex: none; }
+.band h1 { font: 700 2.4rem/1.1 var(--display); margin: 0; letter-spacing: -0.01em; }
+.band p { margin: .35rem 0 0; opacity: .88; }
+nav { display: flex; gap: 1.25rem; flex-wrap: wrap; padding-block: 1rem; border-bottom: 1px solid var(--line); font-weight: 500; }
+nav a { color: var(--link); text-decoration: none; }
+nav a:hover, nav a:focus-visible { text-decoration: underline; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+section { padding-block: 2.25rem 1rem; }
+h2 { font: 700 1.6rem/1.2 var(--display); margin: 0 0 .5rem; text-wrap: balance; }
+h3 { font: 600 1.05rem/1.35 var(--body); margin: 1.6rem 0 .25rem; }
+p, ul { margin: .4rem 0; }
+ul { padding-left: 1.2rem; }
+li + li { margin-top: .25rem; }
+.meta { color: var(--muted); font-size: .92rem; }
+.contact { margin-top: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.1rem; display: flex; gap: .75rem 1rem; align-items: center; flex-wrap: wrap; }
+.contact .label { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); width: 100%; }
+.contact code { font: 400 1rem var(--mono); user-select: all; word-break: break-all; min-width: 0; }
+.contact button { font: 500 .9rem var(--body); color: var(--fg); background: transparent; border: 1px solid var(--line); border-radius: 6px; padding: .35rem .75rem; cursor: pointer; }
+.contact button:hover { border-color: var(--muted); }
+code.path { font: 400 .9rem var(--mono); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: .05rem .35rem; word-break: break-all; }
+.kbd { font: 400 .85rem var(--mono); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 .3rem; background: var(--surface); white-space: nowrap; }
+footer { border-top: 1px solid var(--line); margin-top: 2rem; padding-block: 1.5rem 2.5rem; color: var(--muted); font-size: .9rem; }
+footer .sig { color: var(--gold); font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+html { scroll-behavior: smooth; }
+</style>
+</head>
+<body>
+
+<header class="band">
+  <div class="wrap">
+    <img src="data:image/webp;base64,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" alt="Kuricak app icon">
+    <div>
+      <h1>Kuricak</h1>
+      <p>A quiet, local-first plain-text editor for Windows.</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav aria-label="Page sections">
+    <a href="#support">Support</a>
+    <a href="#privacy">Privacy policy</a>
+  </nav>
+
+  <section id="support" aria-labelledby="support-h">
+    <h2 id="support-h">Support</h2>
+    <p>Questions, bug reports and suggestions are welcome. Please include your Windows version and what you were doing when the problem happened.</p>
+    <div class="contact">
+      <span class="label">Email</span>
+      <code id="email">ahmadnizar.coding@gmail.com</code>
+      <button type="button" id="copy">Copy address</button>
+    </div>
+
+    <h3>System requirements (Windows)</h3>
+    <ul>
+      <li>Windows 10 version 1809 or later, or Windows 11, 64-bit (x64)</li>
+      <li>A graphics driver that supports OpenGL 3.3</li>
+    </ul>
+
+    <h3>Kuricak says it could not start</h3>
+    <p>This usually means the graphics driver does not offer OpenGL 3.3. Install the latest driver from your PC or graphics card maker. Some virtual machines and remote desktop sessions do not provide OpenGL 3.3.</p>
+
+    <h3>Does Kuricak save my text automatically?</h3>
+    <p>No. Kuricak saves a document only when you choose Save (<span class="kbd">Ctrl+S</span>). Before closing, it asks you to Save, Don't Save or Cancel for every unsaved document. Unsaved text cannot be recovered after a crash or power loss.</p>
+
+    <h3>Which text encodings are supported?</h3>
+    <p>Kuricak reads UTF-8, UTF-8 with BOM and UTF-16. It saves as UTF-8 or UTF-16 LE, with LF or CRLF line endings. It also reads legacy Windows-1252 and GB18030 text and tells you when it converts it to Unicode on save.</p>
+
+    <h3>A file changed while it was open</h3>
+    <p>If another program changes a file you have not edited, Kuricak reloads it. If you have unsaved edits, Kuricak asks whether to reload, save a copy, or overwrite.</p>
+
+    <h3>Keyboard shortcuts</h3>
+    <ul>
+      <li><span class="kbd">Ctrl+N</span> new, <span class="kbd">Ctrl+O</span> open, <span class="kbd">Ctrl+S</span> save, <span class="kbd">Ctrl+Shift+S</span> save as</li>
+      <li><span class="kbd">Ctrl+F</span> find, <span class="kbd">Ctrl+H</span> replace, <span class="kbd">F3</span> / <span class="kbd">Shift+F3</span> next / previous match</li>
+      <li><span class="kbd">Ctrl+Tab</span> next document, <span class="kbd">Ctrl+W</span> close document, <span class="kbd">Ctrl+,</span> settings</li>
+    </ul>
+
+    <h3>Uninstalling</h3>
+    <p>Uninstall Kuricak from Start or from Settings &gt; Apps. This removes the app and its preferences. Your text files are never touched.</p>
+  </section>
+
+  <section id="privacy" aria-labelledby="privacy-h">
+    <h2 id="privacy-h">Privacy policy</h2>
+    <p class="meta">Effective 28 October 2026 · Applies to Kuricak for Windows</p>
+
+    <h3>Summary</h3>
+    <p>Kuricak does not collect, store, share or sell any personal information. It has no account, no sign-in, no ads, no analytics and no tracking, and it does not connect to the internet.</p>
+
+    <h3>Your documents</h3>
+    <p>The files you open and save stay on your device, in the locations you choose. Kuricak never uploads, copies or sends your text anywhere.</p>
+
+    <h3>Information stored on your device</h3>
+    <p>To remember your settings, Kuricak keeps a small preferences file on your device only. It contains your appearance choices (such as font, size, colour, theme and transparency), editor options, and the paths of recently opened files. You can clear recent files inside the app, and uninstalling Kuricak removes these preferences. This information never leaves your device.</p>
+
+    <h3>Purchases</h3>
+    <p>Downloads and any purchases are handled by the Microsoft Store under Microsoft’s privacy statement. Kuricak does not receive your payment details.</p>
+
+    <h3>Children</h3>
+    <p>Kuricak collects no information from anyone, including children.</p>
+
+    <h3>Changes to this policy</h3>
+    <p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+
+    <h3>Contact</h3>
+    <p>Questions about this policy: <span style="font-family: var(--mono)">ahmadnizar.coding@gmail.com</span></p>
+  </section>
+
+  <footer>
+    <span class="sig">Kuricak from Bandung</span> · © 2026 Ahmad Nizar Hidayat
+  </footer>
+</div>
+
+<script>
+document.getElementById('copy').addEventListener('click', function (e) {
+  var btn = e.currentTarget, text = document.getElementById('email').textContent;
+  function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = 'Copy address'; }, 1800); }
+  function selectIt() {
+    var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected, press Ctrl+C');
+  }
+  try {
+    navigator.clipboard.writeText(text).then(function () { done('Copied'); }, selectIt);
+  } catch (err) { selectIt(); }
+});
+</script>
+
+</body>
+</html>
